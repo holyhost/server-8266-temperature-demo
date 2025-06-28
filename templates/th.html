@@ -122,9 +122,9 @@
         var myChart2 = echarts.init(document.getElementById('more'));
 
         //准备数据
-        var weekList = {{ data_list['weekdata'] }}
-        var monthList = {{ data_list['monthdata'] }}
-        var dayList = {{ data_list['daydata'] }}
+        var weekList = {{ data_list.weekdata | tojson }}
+        var monthList = {{ data_list.monthdata | tojson}}
+        var dayList = {{ data_list.daydata | tojson }}
         var recentList = {{ data_list.recentdata | tojson}}
         // current selected tab
         var tab = 'recent';
